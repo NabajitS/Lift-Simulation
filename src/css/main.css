@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #0f1729;
+}
+
+label {
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+input {
+    font-size: 20px;
+}
+
+.details-section {
+    color: #FA7070;
+    text-align: center;
+    margin-top: auto;
+    margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+button {
+    margin-top: 1rem;
+    background: #3ABFF8;
+    border: none;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
+}
+
+h3 {
+    margin: 0;
+    padding: 0;
+    color: #ffffffb7;
+    position: absolute;
+    right: 50%;
+    left: 50%;
+    font-size: 50px;
+    width: max-content;
+    opacity: 0.5
+}
+
+.floor-container {
+    display: flex;
+    gap: 3rem;
+    align-items: flex-end;
+    position: relative;
+}
+
+.floor {
+    height: 130px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.lift {
+    background-color: #0a243d;
+    border: 1px solid #C6EBC5;
+    width: 5rem;
+    height: 5rem;
+    position: relative;
+}
+
+/* .call-btn-cont {
+    height: 100px;
+    width: 5rem;
+} */
+
+.call-lift-btn {
+    border: none;
+    background-color: #3ABFF8;
+    color: #DFF6FF;
+    margin: 45px 0 8px 0;
+    border-radius: 5px;
+}
+
+.total-lifts {
+    display: flex;
+    flex-wrap: no-wrap;
+    gap: 2rem;
+}
+
+.lift::before {
+    background-color: #3abff8;
+    content: '';
+    position: absolute;
+    width: 49%;
+    height: 100%;
+    z-index: 5;
+}
+
+.lift::after {
+    background-color: #3abff8;
+    content: '';
+    position: absolute;
+    width: 49%;
+    height: 100%;
+    left: 50%;
+    z-index: 5;
+}
+
+.door::before {
+    animation: left-door 6000ms ease;
+}
+
+.door::after {
+    animation: right-door 6000ms ease;
+}
+
+@keyframes left-door {
+    50% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
+
+@keyframes right-door {
+    50% {
+        transform: translateX(100%);
+    }
+
+    100% {
+        transform: translateX(0%);
+    }
+}
